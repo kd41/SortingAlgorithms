@@ -23,6 +23,7 @@ import com.sort.algorithms.service.impl.QuickWithBubbleSort;
 import com.sort.algorithms.service.impl.RadixSort;
 import com.sort.algorithms.service.impl.SelectionSort;
 import com.sort.algorithms.service.impl.ShakerSort;
+import com.sort.algorithms.service.impl.ShearSort;
 import com.sort.algorithms.service.impl.ShellSort;
 import com.sort.algorithms.service.impl.SwapSort;
 
@@ -31,7 +32,7 @@ import com.sort.algorithms.service.impl.SwapSort;
  */
 public class Program {
   private static int MAX_RANDOM = 100000;
-  private static int MIN_RANDOM = -10000;
+  private static int MIN_RANDOM = -0;
   private static final int CAPACITY = 10000;
 
   public static void main(String... args) {
@@ -55,6 +56,7 @@ public class Program {
     sortingAlgoritms.add(new RadixSort(getArray(array), 8));
     sortingAlgoritms.add(new SelectionSort(getArray(array)));
     sortingAlgoritms.add(new ShakerSort(getArray(array)));
+    sortingAlgoritms.add(new ShearSort(getArray(array)));
     sortingAlgoritms.add(new ShellSort(getArray(array)));
     sortingAlgoritms.add(new SwapSort(getArray(array)));
     for (Sortable sortable : sortingAlgoritms) {

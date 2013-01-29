@@ -13,7 +13,7 @@ Enhanced quick sort
 Extra storage merge sort
 Fast quick sort
 Heap sort
-Java sort (simple Arrays.sort)
+Java sort (simple Arrays.sort. Timsort is used to sort arrays in Java SE 7)
 Insertion sort
 Merge sort
 Quick sort
@@ -21,5 +21,6 @@ Quick with bubble sort (Exchange Sort)
 Radix sort (wrong)
 Selection sort
 Shaker sort
+Shear sort
 Shell sort
 Swap sort (wrong)
