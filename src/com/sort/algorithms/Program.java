@@ -25,7 +25,6 @@ import com.sort.algorithms.service.impl.SelectionSort;
 import com.sort.algorithms.service.impl.ShakerSort;
 import com.sort.algorithms.service.impl.ShearSort;
 import com.sort.algorithms.service.impl.ShellSort;
-import com.sort.algorithms.service.impl.SwapSort;
 
 /**
  * http://www.cs.ubc.ca/~harrison/Java/sorting-demo.html http://home.westman.wave.ca/~rhenry/sort/
@@ -58,7 +57,6 @@ public class Program {
     sortingAlgoritms.add(new ShakerSort(getArray(array)));
     sortingAlgoritms.add(new ShearSort(getArray(array)));
     sortingAlgoritms.add(new ShellSort(getArray(array)));
-    sortingAlgoritms.add(new SwapSort(getArray(array)));
     for (Sortable sortable : sortingAlgoritms) {
       try {
         sortAndLog(sortable);
