@@ -7,7 +7,7 @@ public class EnhancedQuickSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     sort(array, 0, array.length - 1);
   }
 

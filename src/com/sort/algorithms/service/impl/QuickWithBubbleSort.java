@@ -1,13 +1,15 @@
 package com.sort.algorithms.service.impl;
 
-
+/**
+ * Second name: Exchange Sort
+ */
 public class QuickWithBubbleSort extends BaseSort {
   public QuickWithBubbleSort(int[] array) {
     super(array);
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     sort(array, 0, array.length - 1);
   }
 

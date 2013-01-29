@@ -13,9 +13,9 @@ Heap sort
 Insertion sort
 Merge sort
 Quick sort
-Quick with bubble sort
-Radix sort
+Quick with bubble sort (Exchange Sort)
+Radix sort (wrong)
 Selection sort
 Shaker sort
 Shell sort
-Swap sort
+Swap sort (wrong)

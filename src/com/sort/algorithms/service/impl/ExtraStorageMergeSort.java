@@ -11,7 +11,7 @@ public class ExtraStorageMergeSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int scratch[] = new int[array.length];
     sort(array, 0, array.length - 1, scratch);
   }

@@ -1,13 +1,15 @@
 package com.sort.algorithms.service.impl;
 
-
+/**
+ * Algorithm don't work by some properties!!!
+ */
 public class RadixSort extends BaseSort {
   public RadixSort(int[] array) {
     super(array);
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     if (array.length == 0) {
       return;
     }

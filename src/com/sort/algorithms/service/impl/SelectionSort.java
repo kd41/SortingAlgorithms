@@ -12,7 +12,7 @@ public class SelectionSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     for (int i = 0; i < array.length; i++) {
       int min = i;
       int j; /* * Find the smallest element in the unsorted list */

@@ -1,7 +1,7 @@
 package com.sort.algorithms.service;
 
 public interface Sortable {
-  public abstract void sort();
+  public abstract void sort() throws Exception;
 
   public abstract boolean checkSort();
 

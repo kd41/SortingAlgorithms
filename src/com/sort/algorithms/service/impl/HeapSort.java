@@ -11,7 +11,7 @@ public class HeapSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int N = array.length;
     for (int k = N / 2; k > 0; k--) {
       downheap(array, k, N);

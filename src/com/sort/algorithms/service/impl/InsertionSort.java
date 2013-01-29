@@ -11,7 +11,7 @@ public class InsertionSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     for (int i = 1; i < array.length; i++) {
       int j = i;
       int B = array[i];

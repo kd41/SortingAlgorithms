@@ -1,13 +1,12 @@
 package com.sort.algorithms.service.impl;
 
-
 public class FastQuickSort extends BaseSort {
   public FastQuickSort(int[] array) {
     super(array);
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     quickSort(array, 0, array.length - 1);
     insertionSort(array, 0, array.length - 1);
   }
@@ -19,23 +18,27 @@ public class FastQuickSort extends BaseSort {
     int v;
     if ((r - l) > M) {
       i = (r + l) / 2;
-      if (a[l] > a[i])
+      if (a[l] > a[i]) {
         swap(a, l, i);
-      if (a[l] > a[r])
+      }
+      if (a[l] > a[r]) {
         swap(a, l, r);
-      if (a[i] > a[r])
+      }
+      if (a[i] > a[r]) {
         swap(a, i, r);
+      }
       j = r - 1;
       swap(a, i, j);
       i = l;
       v = a[j];
       for (;;) {
-        while (a[++i] < v)
-          ;
-        while (a[--j] > v)
-          ;
-        if (j < i)
+        while (a[++i] < v) {
+        }
+        while (a[--j] > v) {
+        }
+        if (j < i) {
           break;
+        }
         swap(a, i, j);
       }
       swap(a, i, r - 1);

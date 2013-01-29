@@ -23,14 +23,14 @@ import com.sort.algorithms.service.impl.ShellSort;
 import com.sort.algorithms.service.impl.SwapSort;
 
 /**
- * @author Aleksei Mahhov http://www.cs.ubc.ca/~harrison/Java/sorting-demo.html http://home.westman.wave.ca/~rhenry/sort/
+ * http://www.cs.ubc.ca/~harrison/Java/sorting-demo.html http://home.westman.wave.ca/~rhenry/sort/
  */
 public class Program {
   private static int MAX_RANDOM = 100000;
-  private static int MIN_RANDOM = 0;
-  private static final int CAPACITY = 10000;
+  private static int MIN_RANDOM = -100000;
+  private static final int CAPACITY = 3;
 
-  public static void main(String... args) throws Exception {
+  public static void main(String... args) {
     int[] array = getUnsortedArray(CAPACITY);
     List<Sortable> sortingAlgoritms = new LinkedList<>();
     sortingAlgoritms.add(new BidirectionalBubbleSort(getArray(array)));
@@ -50,11 +50,16 @@ public class Program {
     sortingAlgoritms.add(new ShellSort(getArray(array)));
     sortingAlgoritms.add(new SwapSort(getArray(array)));
     for (Sortable sortable : sortingAlgoritms) {
-      sortAndLog(sortable);
+      try {
+        sortAndLog(sortable);
+      } catch (Exception e) {
+        e.printStackTrace();
+        sortable.logArray("By error");
+      }
     }
   }
 
-  private static void sortAndLog(Sortable sortable) {
+  private static void sortAndLog(Sortable sortable) throws Exception {
     long time = System.currentTimeMillis();
     sortable.sort();
     time = System.currentTimeMillis() - time;

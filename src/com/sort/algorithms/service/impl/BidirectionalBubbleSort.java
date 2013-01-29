@@ -12,7 +12,7 @@ public class BidirectionalBubbleSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int j;
     int limit = array.length;
     int st = -1;

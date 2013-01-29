@@ -9,7 +9,7 @@ public class SwapSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int max = array[0];
     for (int i = 1; i < array.length; i++) {
       if (max < array[i]) {

@@ -12,7 +12,7 @@ public class CombSort11 extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     boolean flipped = false;
     int gap, top;
     int i, j;

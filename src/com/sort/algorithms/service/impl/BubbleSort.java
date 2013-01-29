@@ -12,7 +12,7 @@ public class BubbleSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     for (int i = array.length; --i >= 0;) {
       boolean flipped = false;
       for (int j = 0; j < i; j++) {

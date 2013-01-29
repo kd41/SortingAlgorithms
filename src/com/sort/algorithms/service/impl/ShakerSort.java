@@ -11,7 +11,7 @@ public class ShakerSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int i = 0;
     int k = array.length - 1;
     while (i < k) {

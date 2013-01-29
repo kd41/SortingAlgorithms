@@ -16,7 +16,7 @@ public class ShellSort extends BaseSort {
   }
 
   @Override
-  public void sort() {
+  public void sort() throws Exception {
     int h = 1; /* * find the largest h value possible */
     while ((h * 3 + 1) < array.length) {
       h = 3 * h + 1;
