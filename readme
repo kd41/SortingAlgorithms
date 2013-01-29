@@ -4,9 +4,10 @@ Download, compile and run Program.java class located in com. sortalgorithms pack
 
 Sorted algorithms:
 Bidirectional bubble sort
-Bogo sort
+Bogo sort (extremely slow)
 Bubble sort
 Bucket sort
+Cocktail sort
 Comb sort
 Comb sort 11
 Counting sort
@@ -25,3 +26,4 @@ Selection sort
 Shaker sort
 Shear sort
 Shell sort
+Stooge sort (extremely slow)

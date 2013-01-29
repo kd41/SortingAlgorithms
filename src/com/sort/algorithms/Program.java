@@ -8,6 +8,7 @@ import com.sort.algorithms.service.Sortable;
 import com.sort.algorithms.service.impl.BidirectionalBubbleSort;
 import com.sort.algorithms.service.impl.BubbleSort;
 import com.sort.algorithms.service.impl.BucketSort;
+import com.sort.algorithms.service.impl.CocktailSort;
 import com.sort.algorithms.service.impl.CombSort;
 import com.sort.algorithms.service.impl.CombSort11;
 import com.sort.algorithms.service.impl.CountingSort;
@@ -42,6 +43,7 @@ public class Program {
     // sortingAlgoritms.add(new BogoSort(getArray(array)));
     sortingAlgoritms.add(new BubbleSort(getArray(array)));
     sortingAlgoritms.add(new BucketSort(getArray(array)));
+    sortingAlgoritms.add(new CocktailSort(getArray(array)));
     sortingAlgoritms.add(new CombSort(getArray(array)));
     sortingAlgoritms.add(new CombSort11(getArray(array)));
     sortingAlgoritms.add(new CountingSort(getArray(array), MIN_RANDOM, MAX_RANDOM));
@@ -60,6 +62,7 @@ public class Program {
     sortingAlgoritms.add(new ShakerSort(getArray(array)));
     sortingAlgoritms.add(new ShearSort(getArray(array)));
     sortingAlgoritms.add(new ShellSort(getArray(array)));
+    // sortingAlgoritms.add(new StoogeSort(getArray(array)));
     for (Sortable sortable : sortingAlgoritms) {
       try {
         sortAndLog(sortable);
