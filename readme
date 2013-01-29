@@ -1,3 +1,21 @@
 Simple Java 7 application for demonstration sorting algorithms.
 
-Download, compile and run Program.java class located in com.sort.algorithms package.
+Download, compile and run Program.java class located in com. sortalgorithms package.
+
+Sorted algorithms:
+Bidirectional bubble sort
+Bubble sort
+Comb sort 11
+Enhanced quick sort
+Extra storage merge sort
+Fast quick sort
+Heap sort
+Insertion sort
+Merge sort
+Quick sort
+Quick with bubble sort
+Radix sort
+Selection sort
+Shaker sort
+Shell sort
+Swap sort
