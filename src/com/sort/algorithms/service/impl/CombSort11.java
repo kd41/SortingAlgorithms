@@ -20,10 +20,10 @@ public class CombSort11 extends BaseSort {
     do {
       gap = (int) (gap / SHRINKFACTOR);
       switch (gap) {
-      case 0: /* the smallest gap is 1 - bubble sort */
+      case 0:
         gap = 1;
         break;
-      case 9: /* this is what makes this Combsort11 */
+      case 9:
       case 10:
         gap = 11;
         break;
@@ -41,6 +41,6 @@ public class CombSort11 extends BaseSort {
           flipped = true;
         }
       }
-    } while (flipped || (gap > 1)); /* like the bubble and shell sorts we check for a clean pass */
+    } while (flipped || (gap > 1));
   }
 }

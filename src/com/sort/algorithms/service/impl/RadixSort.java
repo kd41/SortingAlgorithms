@@ -1,50 +1,50 @@
 package com.sort.algorithms.service.impl;
 
 /**
- * Algorithm don't work by some properties!!!
+ * Only for positive numbers!
  */
 public class RadixSort extends BaseSort {
+  private int bits;
+
   public RadixSort(int[] array) {
+    this(array, 4);
+  }
+
+  public RadixSort(int[] array, int bits) {
     super(array);
+    this.bits = bits;
   }
 
   @Override
   public void sort() throws Exception {
-    if (array.length == 0) {
-      return;
+    int[] b = new int[array.length];
+    int[] b_orig = b;
+
+    int rshift = 0;
+    for (int mask = ~(-1 << bits); mask != 0; mask <<= bits, rshift += bits) {
+      int[] cntarray = new int[1 << bits];
+      for (int p = 0; p < array.length; ++p) {
+        int key = (array[p] & mask) >> rshift;
+        ++cntarray[key];
+      }
+
+      for (int i = 1; i < cntarray.length; ++i) {
+        cntarray[i] += cntarray[i - 1];
+      }
+
+      for (int p = array.length - 1; p >= 0; --p) {
+        int key = (array[p] & mask) >> rshift;
+        --cntarray[key];
+        b[cntarray[key]] = array[p];
+      }
+
+      int[] temp = b;
+      b = array;
+      array = temp;
     }
-    int[][] np = new int[array.length][2];
-    int[] q = new int[0x100];
-    int i, j, k, l, f = 0;
-    for (k = 0; k < 4; k++) {
-      for (i = 0; i < (np.length - 1); i++) {
-        np[i][1] = i + 1;
-      }
-      np[i][1] = -1;
-      for (i = 0; i < q.length; i++) {
-        q[i] = -1;
-      }
-      for (f = i = 0; i < array.length; i++) {
-        j = ((0xFF << (k << 3)) & array[i]) >> (k << 3);
-        if (q[j] == -1) {
-          l = q[j] = f;
-        } else {
-          l = q[j];
-          while (np[l][1] != -1) {
-            l = np[l][1];
-          }
-          np[l][1] = f;
-          l = np[l][1];
-        }
-        f = np[f][1];
-        np[l][0] = array[i];
-        np[l][1] = -1;
-      }
-      for (l = q[i = j = 0]; i < 0x100; i++) {
-        for (l = q[i]; l != -1; l = np[l][1]) {
-          array[j++] = np[l][0];
-        }
-      }
+
+    if (array == b_orig) {
+      System.arraycopy(array, 0, b, 0, array.length);
     }
   }
 }

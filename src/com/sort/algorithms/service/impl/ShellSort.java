@@ -1,6 +1,5 @@
 package com.sort.algorithms.service.impl;
 
-
 /**
  * A shell sort demonstration algorithm SortAlgorithm.java, Thu Oct 27 10:32:35 1994 Note: Invented by Donald Lewis Shell [CACM, July, 1959, pages
  * 30-32] * @author Jason Harrison@cs.ubc.ca * @version 1.0, 23 Jun 1995 * @version 1.1, 12 Apr 2000 * -- fixed
@@ -17,22 +16,19 @@ public class ShellSort extends BaseSort {
 
   @Override
   public void sort() throws Exception {
-    int h = 1; /* * find the largest h value possible */
+    int h = 1;
     while ((h * 3 + 1) < array.length) {
       h = 3 * h + 1;
-    } /* * while h remains larger than 0 */
-    while (h > 0) { /* * for each set of elements (there are h sets) */
-      for (int i = h - 1; i < array.length; i++) { /* * pick the last element in the set */
+    }
+    while (h > 0) {
+      for (int i = h - 1; i < array.length; i++) {
         int B = array[i];
-        int j = i; /*
-                    * * compare the element at B to the one before it in the set * if they are out of order continue this loop, moving * elements
-                    * "back" to make room for B to be inserted.
-                    */
+        int j = i;
         for (j = i; (j >= h) && (array[j - h] > B); j -= h) {
           array[j] = array[j - h];
-        } /* * insert B into the correct place */
+        }
         array[j] = B;
-      } /* * all sets h-sorted, now decrease set size */
+      }
       h = h / 3;
     }
   }

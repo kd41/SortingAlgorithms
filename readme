@@ -5,11 +5,15 @@ Download, compile and run Program.java class located in com. sortalgorithms pack
 Sorted algorithms:
 Bidirectional bubble sort
 Bubble sort
+Bucket sort
+Comb sort
 Comb sort 11
+Counting sort
 Enhanced quick sort
 Extra storage merge sort
 Fast quick sort
 Heap sort
+Java sort (simple Arrays.sort)
 Insertion sort
 Merge sort
 Quick sort

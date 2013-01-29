@@ -16,9 +16,9 @@ public abstract class BaseSort implements Sortable {
     out.print(super.getClass().getName() + ".\t" + message);
     // for (int i = 0; i < this.array.length; i++) {
     // if ((i + 1) % 10 != 0 || i == 0) {
-    // out.print(this.array[i] + "\t");
+    // out.print("\t" + this.array[i]);
     // } else {
-    // out.println(this.array[i] + "\t");
+    // out.println("\t" + this.array[i]);
     // }
     // }
     out.println(". Is array sorted: " + checkSort());
