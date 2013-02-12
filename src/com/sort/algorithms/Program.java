@@ -31,9 +31,6 @@ import com.sort.algorithms.service.impl.ShellSort;
 /**
  * http://www.cs.ubc.ca/~harrison/Java/sorting-demo.html http://home.westman.wave.ca/~rhenry/sort/
  */
-/*
- * Test from u
- */
 public class Program {
   private static int MAX_RANDOM = 1000000;
   private static int MIN_RANDOM = -MAX_RANDOM;
