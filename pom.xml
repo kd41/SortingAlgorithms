@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ee.kd41.sort</groupId>
+  <artifactId>sort-algorithms</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>Sort algorithms</name>
+  <url>https://github.com/kd41/SortingAlgorithms</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+     <plugins>
+        <plugin>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.0</version>
+           <configuration>
+              <encoding>UTF-8</encoding>
+              <source>1.7</source>
+              <target>1.7</target>
+           </configuration>
+        </plugin>
+     </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+       <groupId>com.google.caliper</groupId>
+       <artifactId>caliper</artifactId>
+       <version>0.5-rc1</version>
+    </dependency>
+  </dependencies>
+</project>
